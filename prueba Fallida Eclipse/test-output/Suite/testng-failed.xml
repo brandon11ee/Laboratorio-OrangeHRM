@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="ErrorValidations(failed)">
+    <classes>
+      <class name="tests.ErrorValidationsTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="incorrectLogin"/>
+        </methods>
+      </class> <!-- tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- ErrorValidations(failed) -->
+  <test thread-count="5" parallel="classes" name="EmployeeCreation(failed)">
+    <classes>
+      <class name="tests.EmployeeCreationTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="verifyEmployeeCreation"/>
+          <include name="CreateEmployee" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- tests.EmployeeCreationTest -->
+    </classes>
+  </test> <!-- EmployeeCreation(failed) -->
+</suite> <!-- Failed suite [Suite] -->
