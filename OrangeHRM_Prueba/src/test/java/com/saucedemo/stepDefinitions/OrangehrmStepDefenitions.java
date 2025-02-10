@@ -1,9 +1,6 @@
 package com.saucedemo.stepDefinitions;
 
-import com.saucedemo.steps.IngresarDatosStep;
-import com.saucedemo.steps.IniciosesionStep;
-import com.saucedemo.steps.RecruitmentSteps;
-import com.saucedemo.steps.ValidacionSteps;
+import com.saucedemo.steps.*;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -19,6 +16,8 @@ public class OrangehrmStepDefenitions {
     RecruitmentSteps recruitmentSteps;
     @Steps
     IngresarDatosStep ingresarDatosStep;
+    @Steps
+    CerrarSesionStep cerrarSesionStep;
 
 
     @Dado("que el usuario ingresa a la página web e inicia sesión correctamente")
@@ -41,5 +40,6 @@ public class OrangehrmStepDefenitions {
         ingresarDatosStep.ingresarDatosPrincipales();
         ingresarDatosStep.ingresarInformacionSecundaria();
         ingresarDatosStep.guardarCambios();
+        cerrarSesionStep.cerrarSesion();
     }
 }
